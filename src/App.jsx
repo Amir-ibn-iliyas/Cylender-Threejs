@@ -6,19 +6,19 @@ import { Bloom, EffectComposer } from "@react-three/postprocessing";
 const App = () => {
   return (
     <>
-      <div className=" w-full h-full flex p-8 bg-black">
-        <div className="w-1/2 flex flex-col items-center justify-center gap-10">
-          <h1 className=" text-white text-4xl font-bold self-center">
+      <div className=" w-full h-full lg:flex-row flex  flex-col pt-8 px-2  lg:p-8 bg-black">
+        <div className="lg:w-1/2 w-full h-1/2 lg:h-full flex flex-col items-center justify-center gap-1 lg:gap-10">
+          <h1 className=" text-white text-sm lg:text-4xl font-bold self-center">
             Tutorial Of React Three Fiber <br  /> (CylinderGeometry)
           </h1>
-          <p className=" text-white font-md  flex flex-col gap-6">
+          <p className=" text-white text-sm lg:text-lg flex flex-col gap-1 lg:gap-6">
             
-            <span className="font-bold text-white text-lg">
+            <span className="font-bold text-white text-sm lg:text-lg">
               CylinderGeometry(radiusTop : Float, radiusBottom : Float, height :
               Float, radialSegments : Integer, heightSegments : Integer,
               openEnded : Boolean, thetaStart : Float, thetaLength : Float)
             </span>
-            <ul className="flex flex-col gap-3">
+            <ul className="flex flex-col text-sm  lg:gap-3">
               <li>radiusTop — Radius of the cylinder at the top. Default is 1.</li>
               <li>radiusBottom — Radius of the cylinder at the bottom. Default is 1.</li>
               <li>height — Height of the cylinder. Default is 1.</li>
@@ -31,8 +31,8 @@ const App = () => {
           </p>
         </div>
 
-        <div className=" w-1/2 h-full ">
-          <Canvas camera={{ fov: 50 }}>
+        <div className=" lg:w-1/2 w-full flex items-center justify-center lg:h-full h-1/2 ">
+          <Canvas  camera={{ fov: 50 }} >
             {/* <OrbitControls/> */}
             <ambientLight />
             <Cylender />
